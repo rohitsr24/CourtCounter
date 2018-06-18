@@ -9,9 +9,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int reset =0;
     int scoreTeamB = 0;
-    int scoreTeamA=0;
+    int scoreTeamA = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addOneForTeamB(View v) {
         scoreTeamB +=1;
-        displayForTeamA(scoreTeamB);
+        displayForTeamB(scoreTeamB);
     }
 
     /**
@@ -80,7 +79,10 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
 
-    public void setReset(View v) {scoreTeamA=0;
+    public void setReset(View v) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
         displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
     }
 }
